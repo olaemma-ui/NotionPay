@@ -117,7 +117,7 @@ export default function LandingPage() {
             <Carousel items={carouseData}/>
             <div className="md:mt-12 mt-5"></div>
             <Badge text="Contact" />
-            <div className="flex gap-4 md:flex-row flex-col items-center justify-center max-w-[60em] gap-4 md:px-[4em] p-4 mx-auto">
+            <div className="flex gap-4 md:flex-row flex-col items-center justify-center max-w-[60em] md:px-[4em] p-4 mx-auto">
                 <div className="left">
                     <p className="text-slate-800 text-2xl md:text-left text-center font-semibold font-['Poppins']">
                         Let’s stay connected
