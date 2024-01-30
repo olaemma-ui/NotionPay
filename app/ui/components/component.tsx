@@ -18,10 +18,7 @@ import {
     WishHelp,
     ReseCurb,
     WelyTics,
-    ArrowUp,
     ArrowDown,
-    SvgProps,
-    EmailIcon
 } from "./svg_components";
 import Link from "next/link";
 import { faq } from "@/app/data/data";
@@ -102,7 +99,7 @@ export const Banner : React.FC = ()=>{
                             
                         </div>
 
-                        <div className=" md:mt-0 mt-12 max-w-[27em] lg:mx-0 md:mx-auto">
+                        <div className=" md:mt-0 mt-12 lg:mx-0 md:mx-auto">
                             <Image
                                 src={mobile}
                                 objectFit=""

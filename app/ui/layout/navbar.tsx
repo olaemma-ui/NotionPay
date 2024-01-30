@@ -22,7 +22,7 @@ export const Navbar : React.FC = ()=>{
                 <div className="md:flex w-[30em] mx-8 hidden justify-around">
                     {
                         navLinkData.map((e) => <Link 
-                            className="decoration-0 text-[.8em]"
+                            className="decoration-0 text-[.8em] text-white"
                             key={e.text} 
                             href={e.to}> 
                             {e.text} 
