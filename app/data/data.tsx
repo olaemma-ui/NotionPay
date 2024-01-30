@@ -1,5 +1,6 @@
 import { CarouselItemProps } from "../ui/components/component";
 import me from '../assets/images/Screenshot - Copy.png';
+import kenny from '../assets/images/aluko.jpeg';
 
 
 export const navLinkData = [
@@ -60,7 +61,7 @@ export const carouseData : CarouselItemProps[] = [
         id: 0,
     },
     {
-        image: me,
+        image: kenny,
         name: 'Aluko Kehinde',
         title: 'Product Designer (UI/UX) & Brand Designer',
         body: 'I\'ll recomend this application a million tims, because it\'s very much reliable and stress free',

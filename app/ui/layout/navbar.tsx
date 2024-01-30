@@ -39,9 +39,9 @@ export const Navbar : React.FC = ()=>{
                 <button
                     type="button"
                     onClick={() => {setIsOpen(!isOpen)}}
-                    className="inline-flex cursor-pointer items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-teal-900 focus:outline-none focus:ring-2 focus:ring-teal-900 dark:text-gray-400 dark:hover:bg-teal-900 dark:focus:ring-teal-900">
+                    className="inline-flex cursor-pointer items-center p-2 focus:outline-none w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden  ">
                     <span className="sr-only">Open main menu</span>
-                    <svg
+                    {/* <svg
                         className="w-5 h-5"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
@@ -55,16 +55,63 @@ export const Navbar : React.FC = ()=>{
                         strokeWidth={2}
                         d="M1 1h15M1 7h15M1 13h15"
                         />
-                    </svg>
+                    </svg> */}
+                    <div className={""+(isOpen ? '' : 'flex flex-col')+""}>
+                        <svg
+                            className={"w-5 h transition-all "+(isOpen ? 'rotate-45' : '')+" "}
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 8"
+                        >
+                            <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M1 7h15M1"
+                            />
+                        </svg>
+                        <svg
+                            className={"w-5 h transition-all "+(isOpen ? 'absolute -rotate-45 top-[2.2em] right-[2em]' : '')+" "}
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 8"
+                        >
+                            <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M1 7h15M1"
+                            />
+                        </svg>
+                        <svg
+                            className={"w-5 h "+(isOpen ? 'hidden' : '')+""}
+                            aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 17 8"
+                        >
+                            <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M1 7h15M1"
+                            />
+                        </svg>
+                    </div>
                 </button>
             </div>
 
-            <div className={`md:hidden  ${isOpen ? 'flex' : 'hidden'} flex-col transition-all`}>
+            <div className={`md:hidden  ${isOpen ? 'flex h-[17em]' : 'invisible absolute -z-99 h-0'} flex-col transition-[height]`}>
                     
-                    <div className="flex w-full flex-col mx- justify-around">
+                    <div className={"flex w-full flex-col mx- justify-around "+(isOpen ? '' : 'hidden')+""}>
                         {
                             navLinkData.map((e) => <Link 
-                                className="decoration-0 text-[.8em] p-2 px-2 cursor-pointer hover:bg-teal-800 hover:bg-opacity-30 transition-all"
+                                className="decoration-0 text-[.8em] p-2 px-2 cursor-pointer hover:bg-teal-800 hover:bg-opacity-30 transition-all mt-2"
                                 key={e.text} 
                                 href={e.to}> 
                                 {e.text} 

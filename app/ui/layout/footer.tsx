@@ -49,7 +49,7 @@ export const Footer: React.FC = ()=>{
                     </div>
                 </div>
 
-                <div className="mt-3 flex flex-wrap gap-11 justify-between items-center">
+                <div className="mt-3 flex flex-wrap gap-4 justify-between items-center">
                     <Link   href={"https://www.linkedin.com/in/emmanuel-tejumola-9324851a1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"}
                             className="flex gap-3 items-center">
                         <Image  alt={'Ola Emma'} 
